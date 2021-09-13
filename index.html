@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Ephraim's Coding Cheatsheet</title>
+</head>
+<body>
+    <!-- Copy below for the page navigation. Appropriate stying also needs to be copied. -->
+    <nav>
+        <h1>The world is changed...</h1>
+        <div class="logo-wrapper">
+            <h4 class="logo"><strong>Code Cheats | </strong><span><light>Copy and Pastable</light></span></h4>
+            <h4 class="logo-small"><stong>CC</stong></h4>
+        </div>
+        <div class="nav-desktop">
+            <a href="#" class="nav-item">Work</a>
+            <a href="about.html" class="nav-item">About</a>
+            <a href="#" class="nav-item">Contact</a>
+        </div>    
+        <i class="material-icons" id="burger-menu">menu</i> 
+    </nav>
+    <!-- Nav end -->
+    <!-- Explaining the grid system -->
+    <div class="main-grid">
+        <p class="full-width">The nav above uses flexbox and material icons in smaller viewport size. Need to link material icon sheet, found in the <strong>head section</strong> or follow the instructions in the following link: <a href="https://google.github.io/material-design-icons">Material Icon Stylesheet</a> </p>
+        <p class="full-width">It's good to use a consistent grid system throught your code. I like creating a <strong>.main-grid</strong> class that can be applied to any element and thus changed universally in the breakpoints. I also like to create different spacing classes such as <strong>.full-width</strong>, which can be applied to any element to make it span the whole 12-cols. Use the inspect mode to see how I first created a grid and then WITHIN that grid I nested this paragraph.</p>
+    </div>
+
+    <!-- Explaining spacing tokens -->
+    <div class="main-grid">
+        <h2 class="full-width">Spacing Tokens</h2>
+        <div class="full-width"><p class="outline">This is the ".full-width" spacing token added as a class.</p></div>
+        <div class="left-align"><p class="outline">This is the ".left-align" spacing token added as a class.</p></div>
+        <div class="right-align"><p class="outline">This is the ".right-align" spacing token added as a class.</p></div>
+    </div>
+    <!-- Importing Images -->
+    <div class="main-grid">
+        <h2 class="full-width top">Importing Images</h2>
+        <img class="right-align" id="image-one" src="./Images/1_card.png" alt="barista" width='400' height='auto'>
+        <div class="left-align" id="image-two"></div>
+        <p class="left-align">The image above has been imported using the CSS property "background-image: url()". This is a good method for creating responsive images such as hero images. The advantage of using CSS to import images is that you can: <br><strong>1) align to grid</strong></br><br><strong>2) Use alignment such as 'cover' and 'center'</strong></br><br>The downside of this method is that the size and positon of the image is less predictable.</br></p>
+        <p class="right-align">The image above has been imported using a simple image tag. These images need to have a width and a height defined. This remains static and cannot be responsively aligned to a grid. The advantage of such images is: <br><br><strong>1) They will not automatically clip.</strong> They are good for things like logos.</br></br><br>Try resizing the viewport. </br></p>
+    </div>
+
+    <!-- Responsive Text Sizes -->
+    <div class="main-grid">
+        <h2 class="full-width">Responsive Text</h2>
+        <p class="full-width">Resize the window to see how the text responds.</p>
+        <h3 class="full-width" id="responsive-text-1">This text uses font-size: 4vw;</h3>
+        <h3 class="full-width" id="responsive-text-2">This text uses font-size: 3vw;</h3>
+    </div>
+
+</body>
+</html>

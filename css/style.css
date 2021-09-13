@@ -1,0 +1,118 @@
+/* Generic doc styling */
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+h4 {
+    font-size: 24px;
+    font-weight: 600;
+}
+/* Flexbox nav - very responsive as is but still needs breakpoints */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10% 0 10%;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+/* Generic classes that can be applied to anything */
+.outline {
+    padding: 4%;
+    border: 1px dashed blue;
+}
+/* The "strong" class can be applied to any text element to make it bold. */
+strong {
+    font-weight: 800;
+}
+/* The "light" class can be applied to any text element to make it light. */
+
+light {
+    font-weight: 400;
+}
+
+.accent-color {
+    color: blue;
+}
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 12px;
+    margin: 0 10% 0 10%;
+}
+.full-width {
+    grid-column: 1 / span 13;
+}
+.top {
+    grid-row: 1 / span 1;
+}
+.left-align {
+    grid-column: 1 / span 6;
+}
+.right-align {
+    grid-column: 7 / span 6
+}
+
+/* Non-generic classes specific to this document */
+#burger-menu {
+    display: none;
+}
+.logo-small {
+    display: none;
+}
+
+.nav-item {
+    text-decoration: none;
+    padding: 16px;
+    color: #424242
+}
+
+
+
+#image-two {
+    background-image: url("../Images/1_card.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    grid-row: 2 / span 1;
+    
+}
+#responsive-text-1 {
+    font-size: 4vw;
+}
+#responsive-text-2 {
+    font-size: 3vw;
+}
+
+@media only screen and (max-width: 800px) {
+    /* the following classes make the burger menu appear, make the desktop navigation dissapear and replaces the large logo with a smaller one */
+
+    #burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-desktop {
+        display: none;
+    }
+   
+    .logo {
+        display: none;
+    }
+    .logo-small {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
